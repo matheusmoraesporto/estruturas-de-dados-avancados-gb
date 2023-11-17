@@ -13,7 +13,7 @@ public class Main {
         graph.addEdge(11, 9);
         graph.addEdge(11, 2);
         graph.addEdge(11, 10);
-        List<Integer> list = graph.topologicallySort();
+        List<Integer> list = graph.sortTopologically();
         System.out.println("Ordenaçao Topológica: " + list);
 
         System.out.println("===========================================");
@@ -23,7 +23,7 @@ public class Main {
         cyclicGraph.addEdge(1,2);
         cyclicGraph.addEdge(2,3);
         cyclicGraph.addEdge(3, 1);
-        List<Integer> resultado = cyclicGraph.topologicallySort();
+        List<Integer> resultado = cyclicGraph.sortTopologically();
         System.out.println("Ordenaçao Topológica: " + resultado);
     }
 }

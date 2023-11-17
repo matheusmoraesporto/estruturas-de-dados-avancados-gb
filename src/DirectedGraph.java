@@ -16,7 +16,7 @@ public class DirectedGraph extends Graph {
         adj[v].add(w);
     }
 
-    public List<Integer> topologicallySort() {
+    public List<Integer> sortTopologically() {
         int[] verticesDegree = calculateDegree();
         System.out.println("Degree is: " + Arrays.toString(verticesDegree));
 
