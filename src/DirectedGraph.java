@@ -45,8 +45,8 @@ public class DirectedGraph extends Graph {
      * @return Uma lista de inteiros contendo o grau de cada vértice.
      */
     private int[] calculateDegree() {
-        int[] degree = new int[this.V];
-        for (List<Integer> arestas : this.adj) {
+        int[] degree = new int[V];
+        for (List<Integer> arestas : adj) {
             for (int v : arestas) {
                 degree[v]++;
             }
