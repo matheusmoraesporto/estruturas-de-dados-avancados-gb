@@ -31,7 +31,8 @@ public class DirectedGraph extends Graph {
         }
 
         if (sortedList.size() != V) {
-            System.out.println(sortedList);
+            System.out.println("sotedList is: " + sortedList);
+            System.out.println("verticesDegree is: " + Arrays.toString(verticesDegree));
             throw new IllegalArgumentException("There is a cycle in this graph!");
         }
 
