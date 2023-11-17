@@ -46,8 +46,8 @@ public class DirectedGraph extends Graph {
      */
     private int[] calculateDegree() {
         int[] degree = new int[V];
-        for (List<Integer> arestas : adj) {
-            for (int v : arestas) {
+        for (List<Integer> edges : adj) {
+            for (int v : edges) {
                 degree[v]++;
             }
         }
