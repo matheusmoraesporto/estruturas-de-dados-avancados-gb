@@ -31,8 +31,10 @@ public class DirectedGraph extends Graph {
         }
 
         if (sortedList.size() != V) {
+            System.out.println(sortedList);
             throw new IllegalArgumentException("There is a cycle in this graph!");
         }
+
         return sortedList;
     }
 
@@ -69,10 +71,12 @@ public class DirectedGraph extends Graph {
     }
 
     /**
-     * Para cada aresta do vértice removido, decrementa o grau e caso este seja 0, então é adicionado na fila para ordenação.
+     * Para cada aresta do vértice removido, decrementa o grau e caso este seja 0,
+     * então é adicionado na fila para ordenação.
+     * 
      * @param removedVertex Índice do vértice removido.
-     * @param degree Lista com os graus de cada vértice.
-     * @param queue Fila com os vértices de grau 0.
+     * @param degree        Lista com os graus de cada vértice.
+     * @param queue         Fila com os vértices de grau 0.
      */
     private void reduceDegree(int removedVertex, int[] degree, Queue<Integer> queue) {
         for (int v : adj[removedVertex]) {

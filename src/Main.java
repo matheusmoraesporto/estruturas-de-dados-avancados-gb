@@ -3,23 +3,27 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        DirectedGraph grafo = new DirectedGraph(12);
+        DirectedGraph graph = new DirectedGraph(12);
+        graph.addEdge(3, 10);
+        graph.addEdge(3, 8);
+        graph.addEdge(5, 11);
+        graph.addEdge(7, 11);
+        graph.addEdge(7, 8);
+        graph.addEdge(8, 9);
+        graph.addEdge(11, 9);
+        graph.addEdge(11, 2);
+        graph.addEdge(11, 10);
+        List<Integer> list = graph.topologicallySort();
+        System.out.println("Ordenaçao Topológica: " + list);
 
-        grafo.addEdge(3, 10);
-        grafo.addEdge(3, 8);
+        System.out.println("===========================================");
 
-        grafo.addEdge(5, 11);
-
-        grafo.addEdge(7, 11);
-        grafo.addEdge(7, 8);
-
-        grafo.addEdge(8, 9);
-
-        grafo.addEdge(11, 9);
-        grafo.addEdge(11, 2);
-        grafo.addEdge(11, 10);
-
-        List<Integer> resultado = grafo.topologicallySort();
+        DirectedGraph cyclicGraph = new DirectedGraph(4);
+        cyclicGraph.addEdge(0, 1);
+        cyclicGraph.addEdge(1,2);
+        cyclicGraph.addEdge(2,3);
+        cyclicGraph.addEdge(3, 1);
+        List<Integer> resultado = cyclicGraph.topologicallySort();
         System.out.println("Ordenaçao Topológica: " + resultado);
     }
 }
